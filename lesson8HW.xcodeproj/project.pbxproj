@@ -13,6 +13,7 @@
 		1F71E1822B41989500B643DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F71E1802B41989500B643DB /* Main.storyboard */; };
 		1F71E1842B41989700B643DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F71E1832B41989700B643DB /* Assets.xcassets */; };
 		1F71E1872B41989700B643DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F71E1852B41989700B643DB /* LaunchScreen.storyboard */; };
+		8C2D38725F7EF5B32EBF97E2 /* Pods_lesson8HW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629DA247FF1198F8FD799B1A /* Pods_lesson8HW.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		1F71E1832B41989700B643DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F71E1862B41989700B643DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F71E1882B41989700B643DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		534DF6A5DB5879C440280DBC /* Pods-lesson8HW.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lesson8HW.debug.xcconfig"; path = "Target Support Files/Pods-lesson8HW/Pods-lesson8HW.debug.xcconfig"; sourceTree = "<group>"; };
+		629DA247FF1198F8FD799B1A /* Pods_lesson8HW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lesson8HW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D457C50449631786E19F613 /* Pods-lesson8HW.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lesson8HW.release.xcconfig"; path = "Target Support Files/Pods-lesson8HW/Pods-lesson8HW.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C2D38725F7EF5B32EBF97E2 /* Pods_lesson8HW.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				1F71E1792B41989500B643DB /* lesson8HW */,
 				1F71E1782B41989500B643DB /* Products */,
+				EBFA383420A6973405749CE4 /* Pods */,
+				5E3D0FD8DC2EC5C9F138E533 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = lesson8HW;
 			sourceTree = "<group>";
 		};
+		5E3D0FD8DC2EC5C9F138E533 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				629DA247FF1198F8FD799B1A /* Pods_lesson8HW.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBFA383420A6973405749CE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				534DF6A5DB5879C440280DBC /* Pods-lesson8HW.debug.xcconfig */,
+				9D457C50449631786E19F613 /* Pods-lesson8HW.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F71E18B2B41989700B643DB /* Build configuration list for PBXNativeTarget "lesson8HW" */;
 			buildPhases = (
+				2EB5162A90DF2126B7222D02 /* [CP] Check Pods Manifest.lock */,
 				1F71E1732B41989500B643DB /* Sources */,
 				1F71E1742B41989500B643DB /* Frameworks */,
 				1F71E1752B41989500B643DB /* Resources */,
+				99197FEB90F3C1C66AD86764 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EB5162A90DF2126B7222D02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lesson8HW-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99197FEB90F3C1C66AD86764 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lesson8HW/Pods-lesson8HW-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lesson8HW/Pods-lesson8HW-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-lesson8HW/Pods-lesson8HW-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F71E1732B41989500B643DB /* Sources */ = {
@@ -287,6 +356,7 @@
 		};
 		1F71E18C2B41989700B643DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 534DF6A5DB5879C440280DBC /* Pods-lesson8HW.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,6 +385,7 @@
 		};
 		1F71E18D2B41989700B643DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D457C50449631786E19F613 /* Pods-lesson8HW.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
